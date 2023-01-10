@@ -28,7 +28,7 @@ export default function Posts({ serverPosts }: { serverPosts: Post[] }) {
     return () => {
       supabase.removeChannel(channel);
     };
-  }, [serverPosts]);
+  }, [supabase,setPosts,posts]);
 
   return <pre>{JSON.stringify(posts, null, 2)}</pre>;
 }
